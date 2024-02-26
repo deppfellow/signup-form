@@ -1,0 +1,140 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* prettier-ignore */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* End of Meyer's Reset */
+/* Start of general settings (e.g., font-face, CSS's properties) */
+
+@font-face {
+    font-family: "helvetica bold";
+    src: 
+        url(assets/fonts/freesansbold-webfont.woff2) format("woff2"),
+        url(assets/fonts/freesansbold-webfont.woff) format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "helvetica";
+    src: 
+        url(assets/fonts/freesans-webfont.woff2) format("woff2"),
+        url(assets/fonts/freesans-webfont.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "typewriter";
+    src: 
+        url(assets/fonts/momt___-webfont.woff2) format("woff2"),
+        url(assets/fonts/momt___-webfont.woff) format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+:root {
+    --frame-height: 640px;
+    /* --cover-abs-pos: ; */
+}
+
+/* End of general settings */
+/* Start of styling */
+
+.main-container {
+    min-height: 100vh;
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+.frame {
+    background-image: url(./assets/img/lococop_Mostima.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.frame .cover {
+    /* background-image: url(./assets/img/lococop_Mostima.png);
+    background-size: auto 640px;
+    background-repeat: no-repeat; */
+    /* flex: 4; */
+    /* background-repeat: no-repeat; */
+}
+
+.frame .banner {
+    width: inherit;
+    padding: 16px 56px;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex: 5; */
+}
+
+.frame .banner img {
+    width: 100px;
+    margin-right: 16px;
+}
+
+.frame .banner p {
+    font: 3rem "typewriter";
+    /* font-size: 3rem; */
+    color: #fff;
+}
+
+.forms {
+    margin: 8px;
+}
+
+.forms .text-container {
+    /* font: ; */
+}
+
+.forms .text-container {
+    /* font: 1.3rem "helvetica bold"; */
+}
