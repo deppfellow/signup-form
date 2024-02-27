@@ -1,62 +1,22 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-/* prettier-ignore */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');  /* "Fjalla One" */
+@import url('https://fonts.googleapis.com/css2?family=Montaga&display=swap'); /* "Montaga" */
+
+/* VARIABLES DECLARATION HERE */
+:root {
+    --form-input-gap: 36px;
 }
 
-/* End of Meyer's Reset */
+/* END OF VARIABLES DECLARATION */
 /* Start of general settings (e.g., font-face, CSS's properties) */
+* {
+    margin: 0;
+    padding: 0;
+}
 
-@font-face {
-    font-family: "helvetica bold";
-    src: 
-        url(assets/fonts/freesansbold-webfont.woff2) format("woff2"),
-        url(assets/fonts/freesansbold-webfont.woff) format("woff");
-    font-weight: bold;
-    font-style: normal;
+body {
+    /* Prevent scrolling, means displayed content only the 100% screen */
+    /* overflow: hidden; */
+
 }
 
 @font-face {
@@ -68,73 +28,106 @@ table {
     font-style: normal;
 }
 
-@font-face {
-    font-family: "typewriter";
-    src: 
-        url(assets/fonts/momt___-webfont.woff2) format("woff2"),
-        url(assets/fonts/momt___-webfont.woff) format("woff");
-    font-weight: bold;
-    font-style: normal;
-}
-
-:root {
-    --frame-height: 640px;
-    /* --cover-abs-pos: ; */
-}
-
 /* End of general settings */
 /* Start of styling */
-
 .main-container {
-    min-height: 100vh;
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
+    min-height: 100dvh;
+    max-width: 100%;
 }
 
-.frame {
+.image-container {
     background-image: url(./assets/img/lococop_Mostima.png);
-    background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
+    flex: 2.4;
 }
 
-.frame .cover {
-    /* background-image: url(./assets/img/lococop_Mostima.png);
-    background-size: auto 640px;
-    background-repeat: no-repeat; */
-    /* flex: 4; */
-    /* background-repeat: no-repeat; */
-}
-
-.frame .banner {
-    width: inherit;
-    padding: 16px 56px;
+.image-container .title-wrapper {
     background-color: rgba(0, 0, 0, 0.4);
+    margin-top: 70dvh;
+    padding: 16px 52px;
+    width: inherit;
     display: flex;
-    justify-content: center;
+    justify-self: center;
     align-items: center;
-    /* flex: 5; */
 }
 
-.frame .banner img {
-    width: 100px;
-    margin-right: 16px;
+.image-container .title-wrapper img {
+    width: 120px;
+    margin-right: 8px;
 }
 
-.frame .banner p {
-    font: 3rem "typewriter";
-    /* font-size: 3rem; */
+.image-container .title-wrapper p {
+    font: 3.8rem "Fjalla One";
     color: #fff;
+    margin-top: 12px;
 }
 
-.forms {
-    margin: 8px;
+/* Form container styling */
+.form-container {
+    font-family: "Montaga", serif;
+    margin: 16px 52px;
+    display: flex;
+    flex-direction: column;
+    flex: 5;
 }
 
-.forms .text-container {
-    /* font: ; */
+.form-container p:first-child {
+    font-size: 1.7rem;
+    margin-bottom: 24px;
 }
 
-.forms .text-container {
-    /* font: 1.3rem "helvetica bold"; */
+.form-container .end-heading {
+    margin-bottom: 60px;
+    font-size: 1.3rem;
+}
+
+.form-container .end-heading+h3 {
+    margin-bottom: 8px;
+}
+
+.form-wrapper {
+    display: flex;
+    margin: 0 var(--form-input-gap);
+    gap: var(--form-input-gap);
+}
+
+.form-wrapper > * {
+    border: 1px solid green;
+}
+
+.form-wrapper .left-field {
+    flex: 1;
+}
+
+.form-wrapper .right-field {
+    flex: 1;
+}
+
+.form-wrapper .input-container label {
+    display: block;
+}
+
+.form-wrapper .input-container input {
+    box-sizing: border-box;
+    width: 280px;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    padding: 4px 8px;
+
+}
+
+.form-wrapper .button-wrapper {
+    padding: 8px 24px;
+}
+
+.form-container .login-hyperlink {
+    margin-top: 24px;
+}
+
+.form-container > * {
+    border: 2px solid red;
 }
