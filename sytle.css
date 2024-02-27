@@ -3,7 +3,7 @@
 
 /* VARIABLES DECLARATION HERE */
 :root {
-    --form-input-gap: 36px;
+    --form-input-gap: 16px;
 }
 
 /* END OF VARIABLES DECLARATION */
@@ -91,36 +91,40 @@ body {
 
 .form-wrapper {
     display: flex;
-    margin: 0 var(--form-input-gap);
+    flex-direction: column;
+    flex-wrap: wrap;
     gap: var(--form-input-gap);
 }
 
-.form-wrapper > * {
+.form-wrapper .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* gap: var(--form-input-gap); */
+}
+
+.form-wrapper .input-wrapper {
     border: 1px solid green;
+    flex: 1 1 0;
 }
 
-.form-wrapper .left-field {
-    flex: 1;
-}
-
-.form-wrapper .right-field {
-    flex: 1;
-}
-
-.form-wrapper .input-container label {
+.form-wrapper .input-wrapper label {
     display: block;
 }
 
-.form-wrapper .input-container input {
+.form-wrapper .input-wrapper input {
     box-sizing: border-box;
-    width: 280px;
     border: 1px solid #e5e7eb;
     border-radius: 4px;
+    min-width: 300px;
+    width: 95%;
+    /* width: max(300px, 25dvw); */
+    /* height: ; */
     padding: 4px 8px;
-
 }
 
-.form-wrapper .button-wrapper {
+.button-wrapper button {
+    margin-top: var(--form-input-gap);
     padding: 8px 24px;
 }
 
