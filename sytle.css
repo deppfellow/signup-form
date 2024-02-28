@@ -92,6 +92,7 @@ body {
 .form-container p:first-child {
     /* font-size: 1.7rem; */
     font-size: clamp(var(--form-title-size), 2.5dvw, 2rem);
+    font-weight: 500;
     margin-bottom: 24px;
 }
 
@@ -128,6 +129,7 @@ body {
 
 .form-wrapper .input-wrapper label {
     display: block;
+    margin-bottom: 4px;
 }
 
 .form-wrapper .input-wrapper input {
@@ -136,7 +138,14 @@ body {
     border-radius: 4px;
     min-width: 300px;
     width: 80%;
+    height: 2rem;
     padding: 4px 8px;
+}
+
+.form-wrapper .input-wrapper input:focus {
+    outline: none;
+    border: 2px solid #344664;
+    box-shadow: -1px 2px 16px -4px;
 }
 
 .button-wrapper button {
@@ -156,4 +165,8 @@ body {
 
 .form-container .login-hyperlink {
     margin-top: 24px;
+}
+
+.form-container .login-hyperlink a {
+    text-decoration: none;
 }
